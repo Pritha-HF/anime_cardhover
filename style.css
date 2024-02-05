@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .container {
+    
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+   
+    
+    @media (min-width: 1024px) {
+      flex-direction: row;
+    }
+  }
+  
+  .item {
+    position: relative;
+    flex: calc(100vw / 7) 1 1;
+    background-size: cover;
+    overflow: hidden;
+    filter: saturate(90%);
+    transition: 1s;
+  }
+  
+  
+  
+  .item:hover {
+    flex-basis: 40%;
+    filter: saturate(120%);
+    
+    @media (min-width: 1024px) {
+      flex-basis: 75%;
+    }
+    
+    .quote {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .item:nth-child(1) {
+    background-image: url("https://w0.peakpx.com/wallpaper/504/993/HD-wallpaper-lucy-cool-cyberpunk-edgerunners.jpg");
+    background-position: 34% 35%;
+  }
+  
+  .item:nth-child(2) {
+    background-image: url("https://www.itl.cat/pngfile/big/34-346927_light-yagami-images-deathnote-hd-wallpaper-and-background.jpg");
+    background-position: 51% 8%;
+  }
+  
+  .item:nth-child(3) {
+    background-image: url("https://www.chromethemer.com/download/hd-wallpapers/kakashi-3840x2160.jpg");
+    background-position: 50% 8%;
+  }
+  
+  .item:nth-child(4) {
+    background-image: url("https://wallpapers.com/images/hd/makima-chainsaw-man-nsnnuo1jgl3k34d2.jpg");
+    background-position: 50% 8%;
+  }
+  
+  .item:nth-child(5) {
+    background-image: url("https://rare-gallery.com/mocahbig/396678-wallpaper-jujutsu-kaisen-satoru-gojo-4k-hd.jpg");
+    background-position: 47% 12%;
+  }
+  
+  .item:nth-child(6) {
+    background-image: url("https://images5.alphacoders.com/131/1312611.jpeg");
+    background-position: 20% 12%;
+  }
+  .item:nth-child(7) {
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/692/868/932/anime-tokyo-ghoul-touka-kirishima-wallpaper-preview.jpg");
+    background-position: 24% 2%;
+  }
+  
+  .quote {
+    position: absolute;
+    color: #fff;
+    bottom: 35%;
+    left: 5rem;
+    width: calc(100% - 10rem);
+    opacity: 0;
+    transition: 1s;
+    transform: translateX(50%);
+    
+    @media (min-width: 512px) {
+      left: 15%;
+      bottom: 35%;
+      width: 20vw;
+    }
+    
+    @media (min-width: 1024px) {
+      left: 15%;
+      bottom: 35%;
+      width: 30vw;
+    }
+    
+    p {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 1.7rem;
+      font-size: 1.4rem;
+      text-wrap: balance;
+      font-style: italic;
+      
+     &:before, &:after {
+        position: absolute;
+        font-size: 5.5rem;
+        opacity: .6;
+      }
+      
+      &:before {
+        content: "“";
+        top: 4rem;
+        left: -2rem;
+        transform: translate(-100%, -100%);
+      }
+      
+      &:after {
+        content: "”";
+        bottom: 2rem;
+        right: -2rem;
+        transform: translate(100%, 100%);
+      }
+    }
+    
+    span {
+      position: absolute;
+      bottom: -2rem;
+      right: 0;
+      text-align: right;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transform: translate(4rem, 100%);
+      
+      &:before {
+        content: "—";
+        margin-right: .7rem;
+      }
+    }
+  }
+  
+  
